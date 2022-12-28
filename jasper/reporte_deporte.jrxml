@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="431e562d-a043-45c7-9855-ed1d3f071a27">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from cliente]]>
+	</queryString>
+	<field name="doc_identidad" class="java.lang.Object"/>
+	<field name="nombres" class="java.lang.Object"/>
+	<field name="temp_contrato" class="java.lang.Object"/>
+	<field name="nacionalidad" class="java.lang.Object"/>
+	<field name="ultimo_club" class="java.lang.Object"/>
+	<field name="fecha_fin" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="28" y="0" width="93" height="79" uuid="1adb1c42-79a7-405d-8cd6-66d4c9c3b30d"/>
+				<imageExpression><![CDATA["C:\\Users\\ALEXCJ\\Desktop\\messi\\jasper\\messi.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="202" y="10" width="212" height="51" uuid="400cf21e-f5ea-4ff6-b36c-8e4cb52fdb7c"/>
+				<textElement>
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contrato]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="102" y="14" width="100" height="20" uuid="fe6bdf85-a9c0-4cfc-9556-256a586de0ff"/>
+				<text><![CDATA[doc_identidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="14" width="100" height="20" uuid="6dbb8476-6f23-4b77-9f0a-4b3a0e7a9cb9"/>
+				<text><![CDATA[nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="14" width="100" height="20" uuid="fa08a8fe-9ada-4f9e-9869-21e3882346e1"/>
+				<text><![CDATA[temp_contrato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="102" y="0" width="100" height="20" uuid="3c7bb235-c41c-4a65-9aee-d071f3e265df"/>
+				<textFieldExpression><![CDATA[""+$F{doc_identidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="0" width="100" height="20" uuid="620f5246-d1f4-4089-bb71-aa05ac0dce25"/>
+				<textFieldExpression><![CDATA[""+$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="0" width="100" height="20" uuid="daa1774a-b88d-4257-a8c8-152ed797dec2"/>
+				<textFieldExpression><![CDATA[""+$F{temp_contrato}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
